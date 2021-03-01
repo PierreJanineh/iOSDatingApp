@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8737DBE825ED4E8900794FD3 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8737DBE725ED4E8900794FD3 /* GeoPoint.swift */; };
 		8763111025ED4C2A00A188F7 /* iOSDatingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763110F25ED4C2A00A188F7 /* iOSDatingAppApp.swift */; };
 		8763111225ED4C2A00A188F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763111125ED4C2A00A188F7 /* ContentView.swift */; };
 		8763111425ED4C2B00A188F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8763111325ED4C2B00A188F7 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8737DBE725ED4E8900794FD3 /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
 		8763110C25ED4C2A00A188F7 /* iOSDatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8763110F25ED4C2A00A188F7 /* iOSDatingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDatingAppApp.swift; sourceTree = "<group>"; };
 		8763111125ED4C2A00A188F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8737DBE225ED4E3800794FD3 /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				8737DBE625ED4E6100794FD3 /* Service */,
+				8737DBE525ED4E5B00794FD3 /* DB */,
+				8737DBE425ED4E4D00794FD3 /* Classes */,
+			);
+			path = logic;
+			sourceTree = "<group>";
+		};
+		8737DBE325ED4E4100794FD3 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		8737DBE425ED4E4D00794FD3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8737DBE725ED4E8900794FD3 /* GeoPoint.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8737DBE525ED4E5B00794FD3 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		8737DBE625ED4E6100794FD3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8763110325ED4C2A00A188F7 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +136,8 @@
 		8763110E25ED4C2A00A188F7 /* iOSDatingApp */ = {
 			isa = PBXGroup;
 			children = (
+				8737DBE325ED4E4100794FD3 /* ui */,
+				8737DBE225ED4E3800794FD3 /* logic */,
 				8763110F25ED4C2A00A188F7 /* iOSDatingAppApp.swift */,
 				8763111125ED4C2A00A188F7 /* ContentView.swift */,
 				8763111325ED4C2B00A188F7 /* Assets.xcassets */,
@@ -259,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8737DBE825ED4E8900794FD3 /* GeoPoint.swift in Sources */,
 				8763111225ED4C2A00A188F7 /* ContentView.swift in Sources */,
 				8763111025ED4C2A00A188F7 /* iOSDatingAppApp.swift in Sources */,
 			);
