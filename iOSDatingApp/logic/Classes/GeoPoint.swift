@@ -14,14 +14,26 @@ class GeoPoint {
                       2. lng        float
      */
     
-    static public var LAT: String = "lat"
-    static public var LNG: String = "lng"
-    static public var GEO_POINT: String = "geoPoint"
+    static public let LAT: String = "lat"
+    static public let LNG: String = "lng"
+    static public let GEO_POINT: String = "geoPoint"
     
-    public var lat, lng: Float
+    public var lat, lng: Float?
     
     init(lat: Float, lng: Float){
         self.lat = lat
         self.lng = lng
+    }
+    
+    init(dictionary: Dictionary<String, Any>){
+        if let _ = dictionary[GeoPoint.GEO_POINT] as? [String: Any] {
+            if let lat = dictionary[GeoPoint.LAT] as? Float {
+                self.lat = lat
+            }
+            if let lng = dictionary[GeoPoint.LNG] as? Float {
+                self.lng = lng
+            }
+            
+        }
     }
 }

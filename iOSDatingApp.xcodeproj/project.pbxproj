@@ -7,64 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8737DBE825ED4E8900794FD3 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8737DBE725ED4E8900794FD3 /* GeoPoint.swift */; };
-		8763111025ED4C2A00A188F7 /* iOSDatingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763110F25ED4C2A00A188F7 /* iOSDatingAppApp.swift */; };
-		8763111225ED4C2A00A188F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763111125ED4C2A00A188F7 /* ContentView.swift */; };
-		8763111425ED4C2B00A188F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8763111325ED4C2B00A188F7 /* Assets.xcassets */; };
-		8763111725ED4C2B00A188F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8763111625ED4C2B00A188F7 /* Preview Assets.xcassets */; };
-		8763112225ED4C2B00A188F7 /* iOSDatingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763112125ED4C2B00A188F7 /* iOSDatingAppTests.swift */; };
-		8763112D25ED4C2B00A188F7 /* iOSDatingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763112C25ED4C2B00A188F7 /* iOSDatingAppUITests.swift */; };
+		874436A325EFC6360094679F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436A225EFC6360094679F /* AppDelegate.swift */; };
+		874436A525EFC6360094679F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436A425EFC6360094679F /* SceneDelegate.swift */; };
+		874436A725EFC6360094679F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436A625EFC6360094679F /* ViewController.swift */; };
+		874436AA25EFC6360094679F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874436A825EFC6360094679F /* Main.storyboard */; };
+		874436AC25EFC6380094679F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 874436AB25EFC6380094679F /* Assets.xcassets */; };
+		874436AF25EFC6380094679F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 874436AD25EFC6380094679F /* LaunchScreen.storyboard */; };
+		874436BA25EFC6380094679F /* iOSDatingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436B925EFC6380094679F /* iOSDatingAppTests.swift */; };
+		874436C525EFC6380094679F /* iOSDatingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436C425EFC6380094679F /* iOSDatingAppUITests.swift */; };
+		874436E325EFC6BE0094679F /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436DA25EFC6BE0094679F /* GeoPoint.swift */; };
+		874436E425EFC6BE0094679F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436DB25EFC6BE0094679F /* Image.swift */; };
+		874436E525EFC6BE0094679F /* SmallUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436DC25EFC6BE0094679F /* SmallUser.swift */; };
+		874436E625EFC6BE0094679F /* WholeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436DD25EFC6BE0094679F /* WholeUser.swift */; };
+		874436E725EFC6BE0094679F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436DE25EFC6BE0094679F /* Message.swift */; };
+		874436E825EFC6BE0094679F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436DF25EFC6BE0094679F /* UserInfo.swift */; };
+		874436E925EFC6BE0094679F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436E025EFC6BE0094679F /* Room.swift */; };
+		874436EA25EFC6BE0094679F /* UserDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436E125EFC6BE0094679F /* UserDistance.swift */; };
+		874436EB25EFC6BE0094679F /* WholeCurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436E225EFC6BE0094679F /* WholeCurrentUser.swift */; };
+		874436F025EFC6CF0094679F /* SocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436EF25EFC6CF0094679F /* SocketServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8763111E25ED4C2B00A188F7 /* PBXContainerItemProxy */ = {
+		874436B625EFC6380094679F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8763110425ED4C2A00A188F7 /* Project object */;
+			containerPortal = 8744369725EFC6360094679F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8763110B25ED4C2A00A188F7;
+			remoteGlobalIDString = 8744369E25EFC6360094679F;
 			remoteInfo = iOSDatingApp;
 		};
-		8763112925ED4C2B00A188F7 /* PBXContainerItemProxy */ = {
+		874436C125EFC6380094679F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8763110425ED4C2A00A188F7 /* Project object */;
+			containerPortal = 8744369725EFC6360094679F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8763110B25ED4C2A00A188F7;
+			remoteGlobalIDString = 8744369E25EFC6360094679F;
 			remoteInfo = iOSDatingApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8737DBE725ED4E8900794FD3 /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
-		8763110C25ED4C2A00A188F7 /* iOSDatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8763110F25ED4C2A00A188F7 /* iOSDatingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDatingAppApp.swift; sourceTree = "<group>"; };
-		8763111125ED4C2A00A188F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8763111325ED4C2B00A188F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8763111625ED4C2B00A188F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8763111825ED4C2B00A188F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8763111D25ED4C2B00A188F7 /* iOSDatingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDatingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8763112125ED4C2B00A188F7 /* iOSDatingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDatingAppTests.swift; sourceTree = "<group>"; };
-		8763112325ED4C2B00A188F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8763112825ED4C2B00A188F7 /* iOSDatingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDatingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8763112C25ED4C2B00A188F7 /* iOSDatingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDatingAppUITests.swift; sourceTree = "<group>"; };
-		8763112E25ED4C2B00A188F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8744369F25EFC6360094679F /* iOSDatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		874436A225EFC6360094679F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		874436A425EFC6360094679F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		874436A625EFC6360094679F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		874436A925EFC6360094679F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		874436AB25EFC6380094679F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		874436AE25EFC6380094679F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		874436B025EFC6380094679F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		874436B525EFC6380094679F /* iOSDatingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDatingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		874436B925EFC6380094679F /* iOSDatingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDatingAppTests.swift; sourceTree = "<group>"; };
+		874436BB25EFC6380094679F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		874436C025EFC6380094679F /* iOSDatingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDatingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		874436C425EFC6380094679F /* iOSDatingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSDatingAppUITests.swift; sourceTree = "<group>"; };
+		874436C625EFC6380094679F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		874436DA25EFC6BE0094679F /* GeoPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
+		874436DB25EFC6BE0094679F /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		874436DC25EFC6BE0094679F /* SmallUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallUser.swift; sourceTree = "<group>"; };
+		874436DD25EFC6BE0094679F /* WholeUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeUser.swift; sourceTree = "<group>"; };
+		874436DE25EFC6BE0094679F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		874436DF25EFC6BE0094679F /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		874436E025EFC6BE0094679F /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		874436E125EFC6BE0094679F /* UserDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDistance.swift; sourceTree = "<group>"; };
+		874436E225EFC6BE0094679F /* WholeCurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WholeCurrentUser.swift; sourceTree = "<group>"; };
+		874436EF25EFC6CF0094679F /* SocketServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8763110925ED4C2A00A188F7 /* Frameworks */ = {
+		8744369C25EFC6360094679F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8763111A25ED4C2B00A188F7 /* Frameworks */ = {
+		874436B225EFC6380094679F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8763112525ED4C2B00A188F7 /* Frameworks */ = {
+		874436BD25EFC6380094679F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,115 +96,118 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8737DBE225ED4E3800794FD3 /* logic */ = {
+		8744369625EFC6360094679F = {
 			isa = PBXGroup;
 			children = (
-				8737DBE625ED4E6100794FD3 /* Service */,
-				8737DBE525ED4E5B00794FD3 /* DB */,
-				8737DBE425ED4E4D00794FD3 /* Classes */,
+				874436A125EFC6360094679F /* iOSDatingApp */,
+				874436B825EFC6380094679F /* iOSDatingAppTests */,
+				874436C325EFC6380094679F /* iOSDatingAppUITests */,
+				874436A025EFC6360094679F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		874436A025EFC6360094679F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8744369F25EFC6360094679F /* iOSDatingApp.app */,
+				874436B525EFC6380094679F /* iOSDatingAppTests.xctest */,
+				874436C025EFC6380094679F /* iOSDatingAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		874436A125EFC6360094679F /* iOSDatingApp */ = {
+			isa = PBXGroup;
+			children = (
+				874436D625EFC6730094679F /* ui */,
+				874436D525EFC65B0094679F /* logic */,
+				874436A225EFC6360094679F /* AppDelegate.swift */,
+				874436A425EFC6360094679F /* SceneDelegate.swift */,
+				874436A625EFC6360094679F /* ViewController.swift */,
+				874436A825EFC6360094679F /* Main.storyboard */,
+				874436AB25EFC6380094679F /* Assets.xcassets */,
+				874436AD25EFC6380094679F /* LaunchScreen.storyboard */,
+				874436B025EFC6380094679F /* Info.plist */,
+			);
+			path = iOSDatingApp;
+			sourceTree = "<group>";
+		};
+		874436B825EFC6380094679F /* iOSDatingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				874436B925EFC6380094679F /* iOSDatingAppTests.swift */,
+				874436BB25EFC6380094679F /* Info.plist */,
+			);
+			path = iOSDatingAppTests;
+			sourceTree = "<group>";
+		};
+		874436C325EFC6380094679F /* iOSDatingAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				874436C425EFC6380094679F /* iOSDatingAppUITests.swift */,
+				874436C625EFC6380094679F /* Info.plist */,
+			);
+			path = iOSDatingAppUITests;
+			sourceTree = "<group>";
+		};
+		874436D525EFC65B0094679F /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				874436D925EFC6890094679F /* Service */,
+				874436D825EFC6840094679F /* DB */,
+				874436D725EFC67C0094679F /* Classes */,
 			);
 			path = logic;
 			sourceTree = "<group>";
 		};
-		8737DBE325ED4E4100794FD3 /* ui */ = {
+		874436D625EFC6730094679F /* ui */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ui;
 			sourceTree = "<group>";
 		};
-		8737DBE425ED4E4D00794FD3 /* Classes */ = {
+		874436D725EFC67C0094679F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8737DBE725ED4E8900794FD3 /* GeoPoint.swift */,
+				874436DA25EFC6BE0094679F /* GeoPoint.swift */,
+				874436DB25EFC6BE0094679F /* Image.swift */,
+				874436DE25EFC6BE0094679F /* Message.swift */,
+				874436E025EFC6BE0094679F /* Room.swift */,
+				874436DC25EFC6BE0094679F /* SmallUser.swift */,
+				874436E125EFC6BE0094679F /* UserDistance.swift */,
+				874436DF25EFC6BE0094679F /* UserInfo.swift */,
+				874436E225EFC6BE0094679F /* WholeCurrentUser.swift */,
+				874436DD25EFC6BE0094679F /* WholeUser.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		8737DBE525ED4E5B00794FD3 /* DB */ = {
+		874436D825EFC6840094679F /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				874436EF25EFC6CF0094679F /* SocketServer.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
 		};
-		8737DBE625ED4E6100794FD3 /* Service */ = {
+		874436D925EFC6890094679F /* Service */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		8763110325ED4C2A00A188F7 = {
-			isa = PBXGroup;
-			children = (
-				8763110E25ED4C2A00A188F7 /* iOSDatingApp */,
-				8763112025ED4C2B00A188F7 /* iOSDatingAppTests */,
-				8763112B25ED4C2B00A188F7 /* iOSDatingAppUITests */,
-				8763110D25ED4C2A00A188F7 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		8763110D25ED4C2A00A188F7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8763110C25ED4C2A00A188F7 /* iOSDatingApp.app */,
-				8763111D25ED4C2B00A188F7 /* iOSDatingAppTests.xctest */,
-				8763112825ED4C2B00A188F7 /* iOSDatingAppUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8763110E25ED4C2A00A188F7 /* iOSDatingApp */ = {
-			isa = PBXGroup;
-			children = (
-				8737DBE325ED4E4100794FD3 /* ui */,
-				8737DBE225ED4E3800794FD3 /* logic */,
-				8763110F25ED4C2A00A188F7 /* iOSDatingAppApp.swift */,
-				8763111125ED4C2A00A188F7 /* ContentView.swift */,
-				8763111325ED4C2B00A188F7 /* Assets.xcassets */,
-				8763111825ED4C2B00A188F7 /* Info.plist */,
-				8763111525ED4C2B00A188F7 /* Preview Content */,
-			);
-			path = iOSDatingApp;
-			sourceTree = "<group>";
-		};
-		8763111525ED4C2B00A188F7 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				8763111625ED4C2B00A188F7 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		8763112025ED4C2B00A188F7 /* iOSDatingAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				8763112125ED4C2B00A188F7 /* iOSDatingAppTests.swift */,
-				8763112325ED4C2B00A188F7 /* Info.plist */,
-			);
-			path = iOSDatingAppTests;
-			sourceTree = "<group>";
-		};
-		8763112B25ED4C2B00A188F7 /* iOSDatingAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8763112C25ED4C2B00A188F7 /* iOSDatingAppUITests.swift */,
-				8763112E25ED4C2B00A188F7 /* Info.plist */,
-			);
-			path = iOSDatingAppUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8763110B25ED4C2A00A188F7 /* iOSDatingApp */ = {
+		8744369E25EFC6360094679F /* iOSDatingApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8763113125ED4C2C00A188F7 /* Build configuration list for PBXNativeTarget "iOSDatingApp" */;
+			buildConfigurationList = 874436C925EFC6380094679F /* Build configuration list for PBXNativeTarget "iOSDatingApp" */;
 			buildPhases = (
-				8763110825ED4C2A00A188F7 /* Sources */,
-				8763110925ED4C2A00A188F7 /* Frameworks */,
-				8763110A25ED4C2A00A188F7 /* Resources */,
+				8744369B25EFC6360094679F /* Sources */,
+				8744369C25EFC6360094679F /* Frameworks */,
+				8744369D25EFC6360094679F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -190,68 +215,68 @@
 			);
 			name = iOSDatingApp;
 			productName = iOSDatingApp;
-			productReference = 8763110C25ED4C2A00A188F7 /* iOSDatingApp.app */;
+			productReference = 8744369F25EFC6360094679F /* iOSDatingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8763111C25ED4C2B00A188F7 /* iOSDatingAppTests */ = {
+		874436B425EFC6380094679F /* iOSDatingAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8763113425ED4C2C00A188F7 /* Build configuration list for PBXNativeTarget "iOSDatingAppTests" */;
+			buildConfigurationList = 874436CC25EFC6380094679F /* Build configuration list for PBXNativeTarget "iOSDatingAppTests" */;
 			buildPhases = (
-				8763111925ED4C2B00A188F7 /* Sources */,
-				8763111A25ED4C2B00A188F7 /* Frameworks */,
-				8763111B25ED4C2B00A188F7 /* Resources */,
+				874436B125EFC6380094679F /* Sources */,
+				874436B225EFC6380094679F /* Frameworks */,
+				874436B325EFC6380094679F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8763111F25ED4C2B00A188F7 /* PBXTargetDependency */,
+				874436B725EFC6380094679F /* PBXTargetDependency */,
 			);
 			name = iOSDatingAppTests;
 			productName = iOSDatingAppTests;
-			productReference = 8763111D25ED4C2B00A188F7 /* iOSDatingAppTests.xctest */;
+			productReference = 874436B525EFC6380094679F /* iOSDatingAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8763112725ED4C2B00A188F7 /* iOSDatingAppUITests */ = {
+		874436BF25EFC6380094679F /* iOSDatingAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8763113725ED4C2C00A188F7 /* Build configuration list for PBXNativeTarget "iOSDatingAppUITests" */;
+			buildConfigurationList = 874436CF25EFC6380094679F /* Build configuration list for PBXNativeTarget "iOSDatingAppUITests" */;
 			buildPhases = (
-				8763112425ED4C2B00A188F7 /* Sources */,
-				8763112525ED4C2B00A188F7 /* Frameworks */,
-				8763112625ED4C2B00A188F7 /* Resources */,
+				874436BC25EFC6380094679F /* Sources */,
+				874436BD25EFC6380094679F /* Frameworks */,
+				874436BE25EFC6380094679F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8763112A25ED4C2B00A188F7 /* PBXTargetDependency */,
+				874436C225EFC6380094679F /* PBXTargetDependency */,
 			);
 			name = iOSDatingAppUITests;
 			productName = iOSDatingAppUITests;
-			productReference = 8763112825ED4C2B00A188F7 /* iOSDatingAppUITests.xctest */;
+			productReference = 874436C025EFC6380094679F /* iOSDatingAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8763110425ED4C2A00A188F7 /* Project object */ = {
+		8744369725EFC6360094679F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					8763110B25ED4C2A00A188F7 = {
+					8744369E25EFC6360094679F = {
 						CreatedOnToolsVersion = 12.4;
 					};
-					8763111C25ED4C2B00A188F7 = {
+					874436B425EFC6380094679F = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 8763110B25ED4C2A00A188F7;
+						TestTargetID = 8744369E25EFC6360094679F;
 					};
-					8763112725ED4C2B00A188F7 = {
+					874436BF25EFC6380094679F = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 8763110B25ED4C2A00A188F7;
+						TestTargetID = 8744369E25EFC6360094679F;
 					};
 				};
 			};
-			buildConfigurationList = 8763110725ED4C2A00A188F7 /* Build configuration list for PBXProject "iOSDatingApp" */;
+			buildConfigurationList = 8744369A25EFC6360094679F /* Build configuration list for PBXProject "iOSDatingApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -259,36 +284,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 8763110325ED4C2A00A188F7;
-			productRefGroup = 8763110D25ED4C2A00A188F7 /* Products */;
+			mainGroup = 8744369625EFC6360094679F;
+			productRefGroup = 874436A025EFC6360094679F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8763110B25ED4C2A00A188F7 /* iOSDatingApp */,
-				8763111C25ED4C2B00A188F7 /* iOSDatingAppTests */,
-				8763112725ED4C2B00A188F7 /* iOSDatingAppUITests */,
+				8744369E25EFC6360094679F /* iOSDatingApp */,
+				874436B425EFC6380094679F /* iOSDatingAppTests */,
+				874436BF25EFC6380094679F /* iOSDatingAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8763110A25ED4C2A00A188F7 /* Resources */ = {
+		8744369D25EFC6360094679F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8763111725ED4C2B00A188F7 /* Preview Assets.xcassets in Resources */,
-				8763111425ED4C2B00A188F7 /* Assets.xcassets in Resources */,
+				874436AF25EFC6380094679F /* LaunchScreen.storyboard in Resources */,
+				874436AC25EFC6380094679F /* Assets.xcassets in Resources */,
+				874436AA25EFC6360094679F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8763111B25ED4C2B00A188F7 /* Resources */ = {
+		874436B325EFC6380094679F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8763112625ED4C2B00A188F7 /* Resources */ = {
+		874436BE25EFC6380094679F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,49 +324,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8763110825ED4C2A00A188F7 /* Sources */ = {
+		8744369B25EFC6360094679F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8737DBE825ED4E8900794FD3 /* GeoPoint.swift in Sources */,
-				8763111225ED4C2A00A188F7 /* ContentView.swift in Sources */,
-				8763111025ED4C2A00A188F7 /* iOSDatingAppApp.swift in Sources */,
+				874436A725EFC6360094679F /* ViewController.swift in Sources */,
+				874436A325EFC6360094679F /* AppDelegate.swift in Sources */,
+				874436EB25EFC6BE0094679F /* WholeCurrentUser.swift in Sources */,
+				874436E325EFC6BE0094679F /* GeoPoint.swift in Sources */,
+				874436F025EFC6CF0094679F /* SocketServer.swift in Sources */,
+				874436A525EFC6360094679F /* SceneDelegate.swift in Sources */,
+				874436E925EFC6BE0094679F /* Room.swift in Sources */,
+				874436E525EFC6BE0094679F /* SmallUser.swift in Sources */,
+				874436E725EFC6BE0094679F /* Message.swift in Sources */,
+				874436E625EFC6BE0094679F /* WholeUser.swift in Sources */,
+				874436E825EFC6BE0094679F /* UserInfo.swift in Sources */,
+				874436E425EFC6BE0094679F /* Image.swift in Sources */,
+				874436EA25EFC6BE0094679F /* UserDistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8763111925ED4C2B00A188F7 /* Sources */ = {
+		874436B125EFC6380094679F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8763112225ED4C2B00A188F7 /* iOSDatingAppTests.swift in Sources */,
+				874436BA25EFC6380094679F /* iOSDatingAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8763112425ED4C2B00A188F7 /* Sources */ = {
+		874436BC25EFC6380094679F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8763112D25ED4C2B00A188F7 /* iOSDatingAppUITests.swift in Sources */,
+				874436C525EFC6380094679F /* iOSDatingAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8763111F25ED4C2B00A188F7 /* PBXTargetDependency */ = {
+		874436B725EFC6380094679F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8763110B25ED4C2A00A188F7 /* iOSDatingApp */;
-			targetProxy = 8763111E25ED4C2B00A188F7 /* PBXContainerItemProxy */;
+			target = 8744369E25EFC6360094679F /* iOSDatingApp */;
+			targetProxy = 874436B625EFC6380094679F /* PBXContainerItemProxy */;
 		};
-		8763112A25ED4C2B00A188F7 /* PBXTargetDependency */ = {
+		874436C225EFC6380094679F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8763110B25ED4C2A00A188F7 /* iOSDatingApp */;
-			targetProxy = 8763112925ED4C2B00A188F7 /* PBXContainerItemProxy */;
+			target = 8744369E25EFC6360094679F /* iOSDatingApp */;
+			targetProxy = 874436C125EFC6380094679F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		874436A825EFC6360094679F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				874436A925EFC6360094679F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		874436AD25EFC6380094679F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				874436AE25EFC6380094679F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		8763112F25ED4C2C00A188F7 /* Debug */ = {
+		874436C725EFC6380094679F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -401,7 +456,7 @@
 			};
 			name = Debug;
 		};
-		8763113025ED4C2C00A188F7 /* Release */ = {
+		874436C825EFC6380094679F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -456,17 +511,14 @@
 			};
 			name = Release;
 		};
-		8763113225ED4C2C00A188F7 /* Debug */ = {
+		874436CA25EFC6380094679F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"iOSDatingApp/Preview Content\"";
 				DEVELOPMENT_TEAM = D652685959;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOSDatingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,17 +530,14 @@
 			};
 			name = Debug;
 		};
-		8763113325ED4C2C00A188F7 /* Release */ = {
+		874436CB25EFC6380094679F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"iOSDatingApp/Preview Content\"";
 				DEVELOPMENT_TEAM = D652685959;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOSDatingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +549,7 @@
 			};
 			name = Release;
 		};
-		8763113525ED4C2C00A188F7 /* Debug */ = {
+		874436CD25EFC6380094679F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -508,7 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D652685959;
 				INFOPLIST_FILE = iOSDatingAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +571,7 @@
 			};
 			name = Debug;
 		};
-		8763113625ED4C2C00A188F7 /* Release */ = {
+		874436CE25EFC6380094679F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -530,7 +579,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D652685959;
 				INFOPLIST_FILE = iOSDatingAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,7 +593,7 @@
 			};
 			name = Release;
 		};
-		8763113825ED4C2C00A188F7 /* Debug */ = {
+		874436D025EFC6380094679F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -564,7 +613,7 @@
 			};
 			name = Debug;
 		};
-		8763113925ED4C2C00A188F7 /* Release */ = {
+		874436D125EFC6380094679F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -587,43 +636,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8763110725ED4C2A00A188F7 /* Build configuration list for PBXProject "iOSDatingApp" */ = {
+		8744369A25EFC6360094679F /* Build configuration list for PBXProject "iOSDatingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8763112F25ED4C2C00A188F7 /* Debug */,
-				8763113025ED4C2C00A188F7 /* Release */,
+				874436C725EFC6380094679F /* Debug */,
+				874436C825EFC6380094679F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8763113125ED4C2C00A188F7 /* Build configuration list for PBXNativeTarget "iOSDatingApp" */ = {
+		874436C925EFC6380094679F /* Build configuration list for PBXNativeTarget "iOSDatingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8763113225ED4C2C00A188F7 /* Debug */,
-				8763113325ED4C2C00A188F7 /* Release */,
+				874436CA25EFC6380094679F /* Debug */,
+				874436CB25EFC6380094679F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8763113425ED4C2C00A188F7 /* Build configuration list for PBXNativeTarget "iOSDatingAppTests" */ = {
+		874436CC25EFC6380094679F /* Build configuration list for PBXNativeTarget "iOSDatingAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8763113525ED4C2C00A188F7 /* Debug */,
-				8763113625ED4C2C00A188F7 /* Release */,
+				874436CD25EFC6380094679F /* Debug */,
+				874436CE25EFC6380094679F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8763113725ED4C2C00A188F7 /* Build configuration list for PBXNativeTarget "iOSDatingAppUITests" */ = {
+		874436CF25EFC6380094679F /* Build configuration list for PBXNativeTarget "iOSDatingAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8763113825ED4C2C00A188F7 /* Debug */,
-				8763113925ED4C2C00A188F7 /* Release */,
+				874436D025EFC6380094679F /* Debug */,
+				874436D125EFC6380094679F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8763110425ED4C2A00A188F7 /* Project object */;
+	rootObject = 8744369725EFC6360094679F /* Project object */;
 }
