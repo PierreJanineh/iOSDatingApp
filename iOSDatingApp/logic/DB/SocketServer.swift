@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SocketDelegate: class {
-    func received(result: Data)
+    func socketDataReceived(result: Data)
 }
 
 class SocketServer: NSObject {
@@ -101,6 +101,11 @@ class SocketServer: NSObject {
         writeToOutputStream(int: uid)
     }
     
+    public func getFavouriteUsers(uid: UInt8!) {
+        writeToOutputStream(int: SocketServer.GET_FAVS)
+        writeToOutputStream(int: uid)
+    }
+    
 }
 extension SocketServer: StreamDelegate {
     
@@ -109,7 +114,8 @@ extension SocketServer: StreamDelegate {
         case .hasBytesAvailable:
             print("inputStream has something to pass")
             let s = readStringFrom(stream: aStream as! InputStream)
-            delegate?.received(result: Data(s!.utf8))
+            delegate?.socketDataReceived(result: Data(s!.utf8))
+            closeNetworkConnection()
         case .endEncountered:
             print("end of inputStream")
         case .errorOccurred:
