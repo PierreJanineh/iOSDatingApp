@@ -14,15 +14,6 @@ extension UInt8 {
     }
 }
 
-extension Data {
-    init(from value: UnsafeMutablePointer<UInt8>) {
-        self = Swift.withUnsafeBytes(of: value) {
-            Data($0)
-        }
-    }
-    
-}
-
 extension UIImageView {
     private func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode

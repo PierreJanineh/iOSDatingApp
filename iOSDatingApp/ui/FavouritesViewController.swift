@@ -18,21 +18,22 @@ class FavouritesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = Constants.BACKROUND_COLOR
         
-        collection = UICollectionView(frame: CGRect(origin: view.bounds.origin, size: view.bounds.size), collectionViewLayout: UICollectionViewFlowLayout())
+        collection = UICollectionView(frame: CGRect(x: view.safeAreaLayoutGuide.layoutFrame.minX,
+                                                    y: view.safeAreaLayoutGuide.layoutFrame.minY,
+                                                    width: view.safeAreaLayoutGuide.layoutFrame.width,
+                                                    height: view.safeAreaLayoutGuide.layoutFrame.height),
+                                      collectionViewLayout: UICollectionViewFlowLayout())
         guard let collection = collection else {
             return
         }
+        collection.backgroundColor = Constants.BACKROUND_COLOR
         view.addSubview(collection)
-        collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        collection.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        collection.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        collection.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         collection.delegate = self
         collection.dataSource = self
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: FAV_CELL)
+        collection.register(CollectionCell.self, forCellWithReuseIdentifier: FAV_CELL)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +47,7 @@ class FavouritesViewController: UIViewController {
 }
 extension FavouritesViewController: SocketDelegate {
     func socketDataReceived(result: Data) {
-        
+        print("data: \(result)")
         let result = UserDistance.processUserDistancesFromData(data: result)
         if let result = result {
             print("result: \(result)")
@@ -67,11 +68,10 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FAV_CELL, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FAV_CELL, for: indexPath) as! CollectionCell
         
-        let view = CollectionCell(frame: CGRect(origin: cell.bounds.origin, size: cell.bounds.size), user: result![indexPath.row])
-        cell.addSubview(view)
-        view.viewDidLoad()
+        cell.user = result![indexPath.row]
+        cell.viewDidLoad()
         return cell
     }
     

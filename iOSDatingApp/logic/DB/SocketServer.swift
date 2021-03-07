@@ -13,7 +13,7 @@ protocol SocketDelegate: class {
 
 class SocketServer: NSObject {
     
-    static private let HOST = "localhost"
+    static private let HOST = "192.168.1.226"
     static private let PORT: UInt32 = 3000
     
     /*MESSAGE*/
@@ -96,6 +96,11 @@ class SocketServer: NSObject {
         isOpen = false
     }
     
+    public func getNewUsers(uid: UInt8!) {
+        writeToOutputStream(int: SocketServer.GET_NEW_USERS)
+        writeToOutputStream(int: uid)
+    }
+    
     public func getNearbyUsers(uid: UInt8!) {
         writeToOutputStream(int: SocketServer.GET_NEARBY_USERS)
         writeToOutputStream(int: uid)
@@ -114,8 +119,9 @@ extension SocketServer: StreamDelegate {
         case .hasBytesAvailable:
             print("inputStream has something to pass")
             let s = readStringFrom(stream: aStream as! InputStream)
-            delegate?.socketDataReceived(result: Data(s!.utf8))
+            print(s)
             closeNetworkConnection()
+            delegate?.socketDataReceived(result: Data(s!.utf8))
         case .endEncountered:
             print("end of inputStream")
         case .errorOccurred:
@@ -150,18 +156,15 @@ extension SocketServer: StreamDelegate {
     private func readDataFrom(stream: InputStream, size: Int) -> Data? {
         let buffer = getBufferFrom(stream: stream, size: size)
         
-        return Data(from: buffer)
+        return Data(bytes: buffer, count: size)
     }
     
     private func readStringFrom(stream: InputStream, withSize: Int) -> String? {
-        let buffer = getBufferFrom(stream: stream, size: withSize)
-        
-//        buffer.deallocate()
-//        buffer.initialize(from: buffer, count: size)
-        let s = String(cString: buffer)
-//        let s = String(validatingUTF8: buffer)
-        let data = Data(from: buffer)
-//        let s = String(bytes: data, encoding: .utf8)
+        print("size: \(withSize)")
+        let d = readDataFrom(stream: stream, size: withSize)!
+        let s = String(data: d, encoding: .utf8)
+//        let buffer = getBufferFrom(stream: stream, size: withSize)
+//        let s = String(cString: buffer)
         return s
     }
     

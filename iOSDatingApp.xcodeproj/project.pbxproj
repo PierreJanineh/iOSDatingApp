@@ -27,6 +27,8 @@
 		874436F025EFC6CF0094679F /* SocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436EF25EFC6CF0094679F /* SocketServer.swift */; };
 		874436FE25EFD0EE0094679F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874436FD25EFD0EE0094679F /* Extensions.swift */; };
 		87927AA225F17CB8008A9FF2 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87927AA125F17CB8008A9FF2 /* CollectionCell.swift */; };
+		87927AA725F233A4008A9FF2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87927AA625F233A4008A9FF2 /* DashboardViewController.swift */; };
+		87927ABB25F2911E008A9FF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87927ABA25F2911E008A9FF2 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		874436EF25EFC6CF0094679F /* SocketServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketServer.swift; sourceTree = "<group>"; };
 		874436FD25EFD0EE0094679F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		87927AA125F17CB8008A9FF2 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		87927AA625F233A4008A9FF2 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		87927ABA25F2911E008A9FF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +170,11 @@
 		874436D625EFC6730094679F /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				87927ABF25F4E82D008A9FF2 /* Profile */,
+				87927AAB25F24D9A008A9FF2 /* Collections */,
 				874436A625EFC6360094679F /* FavouritesViewController.swift */,
-				87927AA125F17CB8008A9FF2 /* CollectionCell.swift */,
+				87927AA625F233A4008A9FF2 /* DashboardViewController.swift */,
+				87927ABA25F2911E008A9FF2 /* Constants.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -202,6 +209,21 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		87927AAB25F24D9A008A9FF2 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				87927AA125F17CB8008A9FF2 /* CollectionCell.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		87927ABF25F4E82D008A9FF2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				874436A725EFC6360094679F /* FavouritesViewController.swift in Sources */,
+				87927ABB25F2911E008A9FF2 /* Constants.swift in Sources */,
 				874436A325EFC6360094679F /* AppDelegate.swift in Sources */,
 				874436EB25EFC6BE0094679F /* WholeCurrentUser.swift in Sources */,
 				874436E325EFC6BE0094679F /* GeoPoint.swift in Sources */,
@@ -349,6 +372,7 @@
 				874436EA25EFC6BE0094679F /* UserDistance.swift in Sources */,
 				874436FE25EFD0EE0094679F /* Extensions.swift in Sources */,
 				87927AA225F17CB8008A9FF2 /* CollectionCell.swift in Sources */,
+				87927AA725F233A4008A9FF2 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
