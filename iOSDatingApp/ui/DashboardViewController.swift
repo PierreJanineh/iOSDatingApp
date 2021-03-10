@@ -19,26 +19,41 @@ class DashboardViewController: UIViewController {
     
     private var newCollection: UICollectionView?
     private var nearbyCollection: UICollectionView?
+    private var progress: UIActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Constants.BACKROUND_COLOR
+        view.backgroundColor = Constants.Colors.BACKROUND_COLOR
+        navigationItem.title = Constants.Strings.DASH_FRAGMENT
+        
+        progress = UIActivityIndicatorView(style: .large)
+        guard let progress = progress else {
+            return
+        }
+        progress.translatesAutoresizingMaskIntoConstraints = false
+        progress.startAnimating()
+        progress.hidesWhenStopped = true
+        view.addSubview(progress)
+        progress.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        progress.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         let newLayout = UICollectionViewFlowLayout()
         newLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         let nearbyLayout = UICollectionViewFlowLayout()
         nearbyLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
         
-        newCollection = UICollectionView(frame: CGRect(origin: CGPoint(x: view.safeAreaLayoutGuide.layoutFrame.minX,
-                                                                       y: view.safeAreaLayoutGuide.layoutFrame.minY),
-                                                       size: CGSize(width: view.safeAreaLayoutGuide.layoutFrame.width,
-                                                                    height: view.safeAreaLayoutGuide.layoutFrame.height*(1/5))),
+        newCollection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0),
                                          collectionViewLayout: newLayout)
         guard let newCollection = newCollection else {
             return
         }
-        newCollection.backgroundColor = Constants.BACKROUND_COLOR
         view.addSubview(newCollection)
+        newCollection.translatesAutoresizingMaskIntoConstraints = false
+        newCollection.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        newCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        newCollection.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        newCollection.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3).isActive = true
+        newCollection.backgroundColor = Constants.Colors.BACKROUND_COLOR
         
         newCollection.delegate = self
         newCollection.dataSource = self
@@ -46,26 +61,33 @@ class DashboardViewController: UIViewController {
         
         newCollection.isPagingEnabled = true
         
-        nearbyCollection = UICollectionView(frame: CGRect(x: view.safeAreaLayoutGuide.layoutFrame.minX,
-                                                          y: newCollection.safeAreaLayoutGuide.layoutFrame.maxY,
-                                                          width: view.safeAreaLayoutGuide.layoutFrame.width,
-                                                          height: view.safeAreaLayoutGuide.layoutFrame.height - newCollection.safeAreaLayoutGuide.layoutFrame.height),
-                                            collectionViewLayout: nearbyLayout)
+        nearbyCollection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: nearbyLayout)
         guard let nearbyCollection = nearbyCollection else {
             return
         }
-        nearbyCollection.backgroundColor = Constants.BACKROUND_COLOR
+        nearbyCollection.backgroundColor = Constants.Colors.BACKROUND_COLOR
         view.addSubview(nearbyCollection)
+        nearbyCollection.translatesAutoresizingMaskIntoConstraints = false
+        nearbyCollection.topAnchor.constraint(equalTo: newCollection.bottomAnchor).isActive = true
+        nearbyCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        nearbyCollection.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        nearbyCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         nearbyCollection.delegate = self
         nearbyCollection.dataSource = self
         nearbyCollection.register(CollectionCell.self, forCellWithReuseIdentifier: NEARBY_CELL)
         
+        view.bringSubviewToFront(progress)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         socket.delegate = self
+        connect()
+    }
+    
+    /// Connect to Socket and start request
+    private func connect() {
         socket.connect()
         socket.getNewUsers(uid: 5)
     }
@@ -76,14 +98,16 @@ class DashboardViewController: UIViewController {
     }
 }
 extension DashboardViewController: SocketDelegate {
-    func socketDataReceived(result: Data) {
+    func socketDataReceived(result: Data?) {
+        if result == nil { return }
         print("data: \(result)")
-        let result = UserDistance.processUserDistancesFromData(data: result)
+        let result = UserDistance.processUserDistancesFromData(data: result!)
         if let _ = newUsers,
            let nearbyUsers = result {
             print("nearby")
             self.nearbyUsers = nearbyUsers
             nearbyCollection?.reloadData()
+            progress!.stopAnimating()
         } else {
             print("new")
             self.newUsers = result
@@ -93,6 +117,10 @@ extension DashboardViewController: SocketDelegate {
             }
             socket.getNearbyUsers(uid: 5)
         }
+    }
+    
+    func receivedNil() {
+        connect()
     }
 }
 extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

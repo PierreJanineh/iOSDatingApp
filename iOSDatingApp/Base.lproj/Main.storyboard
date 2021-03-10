@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="paN-4n-6BF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BSS-ms-FBd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -18,13 +18,14 @@
                         <viewLayoutGuide key="safeArea" id="cbn-BI-coj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" id="KFW-ue-GfV" userLabel="Item 3"/>
+                    <tabBarItem key="tabBarItem" title="Chat" id="KFW-ue-GfV" userLabel="Item 3"/>
+                    <navigationItem key="navigationItem" title="Chat" id="j5q-Ix-pIa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2V-yl-5r1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-822" y="684"/>
         </scene>
-        <!--Item 2-->
+        <!--Dashboard-->
         <scene sceneID="oeA-9Y-C48">
             <objects>
                 <viewController id="8Uh-Uw-LHp" customClass="DashboardViewController" customModule="iOSDatingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,13 +35,14 @@
                         <viewLayoutGuide key="safeArea" id="dLI-Hj-0Fk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="lH3-Si-Hx5"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="lH3-Si-Hx5"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="clA-QR-qsf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqU-Ys-ZXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1581" y="684"/>
+            <point key="canvasLocation" x="-1581.1594202898552" y="683.70535714285711"/>
         </scene>
-        <!--Item 1-->
+        <!--Favourites-->
         <scene sceneID="D9i-t2-LKL">
             <objects>
                 <viewController id="zPA-Ve-8qZ" customClass="FavouritesViewController" customModule="iOSDatingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,16 +52,18 @@
                         <viewLayoutGuide key="safeArea" id="sGg-f8-p5B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="kky-78-lFU"/>
+                    <tabBarItem key="tabBarItem" title="Favourites" id="kky-78-lFU"/>
+                    <navigationItem key="navigationItem" title="Favourites" id="YXG-2b-gLa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7U-lt-wlT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2352" y="684"/>
+            <point key="canvasLocation" x="-2352.1739130434785" y="683.70535714285711"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar-->
         <scene sceneID="frF-f5-V2n">
             <objects>
-                <tabBarController id="paN-4n-6BF" sceneMemberID="viewController">
+                <tabBarController id="paN-4n-6BF" customClass="MainTabBar" customModule="iOSDatingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mkI-Dv-smW"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rHm-bw-8tk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -74,6 +78,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEE-Lp-LZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1581" y="-44"/>
+        </scene>
+        <!--Main Navigation-->
+        <scene sceneID="cts-i7-jSP">
+            <objects>
+                <navigationController id="BSS-ms-FBd" customClass="MainNavigation" customModule="iOSDatingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sya-hR-FYh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="paN-4n-6BF" kind="relationship" relationship="rootViewController" id="gTx-vN-Ohf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrU-7m-iWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1581" y="-753"/>
         </scene>
     </scenes>
     <resources>

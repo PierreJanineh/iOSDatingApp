@@ -54,7 +54,19 @@ class UserInfo {
     public var role: Role?
     public var disabilities: [Disability]?
     
-    init(uid: Int, about: String, weight: Int, height: Int, birthDate: Date, relationship: Relationship, religion: Religion, orientation: Orientation, ethnicity: Ethnicity, reference: Reference, stDs: [STD], role: Role, disabilities: [Disability]) {
+    init(uid: Int,
+         about: String,
+         weight: Int,
+         height: Int,
+         birthDate: Date,
+         relationship: Relationship,
+         religion: Religion,
+         orientation: Orientation,
+         ethnicity: Ethnicity,
+         reference: Reference,
+         stDs: [STD],
+         role: Role,
+         disabilities: [Disability]) {
         self.uid = uid
         self.about = about
         self.weight = weight
@@ -70,7 +82,26 @@ class UserInfo {
         self.disabilities = disabilities
     }
     
-    init(dictionary: Dictionary<String, Any>){
+    init(jsonObject: Any){
+        if let dictionary = jsonObject as? [String: Any] {
+            let info = UserInfo(dictionary: dictionary)
+            self.uid = info.uid
+            self.about = info.about
+            self.weight = info.weight
+            self.height = info.height
+            self.birthDate = info.birthDate
+            self.relationship = info.relationship
+            self.religion = info.religion
+            self.orientation = info.orientation
+            self.ethnicity = info.ethnicity
+            self.reference = info.reference
+            self.stDs = info.stDs
+            self.role = info.role
+            self.disabilities = info.disabilities
+        }
+    }
+    
+    init(dictionary: [String: Any]) {
         if let uid = dictionary[UserInfo.UID] as? Int {
             self.uid = uid
         }
@@ -83,36 +114,53 @@ class UserInfo {
         if let height = dictionary[UserInfo.HEIGHT] as? Int {
             self.height = height
         }
-        if let birthDate = dictionary[UserInfo.BIRTH_DATE] as? Date {
-            self.birthDate = birthDate
+        if let birthDate = dictionary[UserInfo.BIRTH_DATE] as? String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMMM dd, yyyy"
+            self.birthDate = dateFormatter.date(from: birthDate)
         }
-        if let relationship = dictionary[UserInfo.RELATIONSHIP] as? Relationship {
-            self.relationship = relationship
+        if let relationship = dictionary[UserInfo.RELATIONSHIP] as? String {
+            self.relationship = UserInfo.Relationship.from(string: relationship)
         }
-        if let religion = dictionary[UserInfo.RELIGION] as? Religion {
-            self.religion = religion
+        if let religion = dictionary[UserInfo.RELIGION] as? String {
+            self.religion = UserInfo.Religion.from(string: religion)
         }
-        if let orientation = dictionary[UserInfo.ORIENTATION] as? Orientation {
-            self.orientation = orientation
+        if let orientation = dictionary[UserInfo.ORIENTATION] as? String {
+            self.orientation = UserInfo.Orientation.from(string: orientation)
         }
-        if let ethnicity = dictionary[UserInfo.ETHNICITY] as? Ethnicity {
-            self.ethnicity = ethnicity
+        if let ethnicity = dictionary[UserInfo.ETHNICITY] as? String {
+            self.ethnicity = UserInfo.Ethnicity.from(string: ethnicity)
         }
-        if let reference = dictionary[UserInfo.REFERENCE] as? Reference {
-            self.reference = reference
+        if let reference = dictionary[UserInfo.REFERENCE] as? String {
+            self.reference = UserInfo.Reference.from(string: reference)
         }
         if let stdS = dictionary[UserInfo.STDS] as? [Any] {
             self.stDs = STD.getArrayOfEnumsFrom(values: stdS as! [String])
         }
-        if let role = dictionary[UserInfo.ROLE] as? Role {
-            self.role = role
+        if let role = dictionary[UserInfo.ROLE] as? String {
+            self.role = UserInfo.Role.from(string: role)
         }
         if let disabilities = dictionary[UserInfo.DISABILITIES] as? [Any] {
             self.disabilities = Disability.getArrayOfEnumsFrom(values: disabilities as! [String])
         }
     }
     
-    public enum Relationship {
+    /**
+     Processes `Data` of JsonObject instance to `UserInfo`.
+     
+     - Parameter data: The `Data` containing JsonObject.
+     
+     - Returns: `UserInfo` from the JsonObject in Data.
+     */
+    static public func processUserInfoFromData(data: Data) -> UserInfo? {
+        
+        if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
+            return UserInfo(jsonObject: json)
+        }
+        return nil
+    }
+    
+    public enum Relationship: CaseIterable {
             case NOT_DEFINED,
             IN_RELATIONSHIP_SOLO,
             IN_RELATIONSHIP_COUPLE,
@@ -163,7 +211,7 @@ class UserInfo {
         }
     }
 
-    public enum Religion {
+    public enum Religion: CaseIterable {
         case NOT_DEFINED,
         CHRISTIAN,
         MUSLIM,
@@ -201,7 +249,7 @@ class UserInfo {
 
     }
 
-    public enum Orientation {
+    public enum Orientation: CaseIterable {
         case NOT_DEFINED,
         STRAIGHT,
         GAY,
@@ -248,7 +296,7 @@ class UserInfo {
         }
     }
 
-    public enum Ethnicity {
+    public enum Ethnicity: CaseIterable {
         case NOT_DEFINED,
         MIDDLE_EASTERN,
         NATIVE_AMERICAN,
@@ -290,7 +338,7 @@ class UserInfo {
         }
     }
 
-    public enum Reference {
+    public enum Reference: CaseIterable {
         case NOT_DEFINED,
         HE,
         SHE,
@@ -396,7 +444,7 @@ class UserInfo {
         }
     }
 
-    public enum Role {
+    public enum Role: CaseIterable {
         case NOT_DEFINED,
         TOP,
         BOTTOM,
@@ -498,4 +546,21 @@ extension CaseIterable {
         return Self.allCases.first { string == "\($0)" }
     }
     func toString() -> String { "\(self)" }
+}
+
+extension Array {
+    func toString(isDisability: Bool) -> String {
+        var s: String = ""
+        for i in 0..<self.count {
+            if isDisability {
+                s.append((self[i] as! UserInfo.Disability).toString())
+            }else {
+                s.append((self[i] as! UserInfo.STD).toString())
+            }
+            if i != self.count-1 {
+                s.append(" ,")
+            }
+        }
+        return s
+    }
 }
